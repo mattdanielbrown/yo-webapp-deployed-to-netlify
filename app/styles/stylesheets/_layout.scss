@@ -1,0 +1,117 @@
+
+.container {
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+
+// Page Regions
+//------------------------------------------------------------------------------
+$page-region--nav     : '[role=navigation]';
+$navbar-list          : '[role=navigation] > ul';
+$page-region--header  : '[role=banner]';
+$page-region--main    : '[role=main]';
+$page-region--footer  : '[role=contentinfo]';
+$page-region-selectors: '[role=navigation], [role=banner], [role=main], [role=contentinfo]';
+
+
+// Page Regions
+//------------------------------------------------------------------------------
+#{$page-region-selectors} {
+  position : relative;
+  width : 100%;
+  min-width : 100vw;
+}
+#{$page-region--header} > hgroup, #{$page-region--main} > * {
+  @extend .container;
+}
+#{$page-region--main} {
+  padding : 1em 0;
+  flex-grow : 1;
+  section, article {
+    padding : 1em 0;
+    margin-bottom : 2em;
+  }
+}
+#{$page-region--footer} {
+  padding : 2em 0;
+  text-align : center;
+  margin : 0;
+  p {
+    line-height : 1 !important;
+    margin : 0 auto;
+    padding : 0;
+    font-size : small;
+    color: gray;
+    font-weight : 600;
+  }
+}
+#{$page-region--header} {
+  padding : 2em 0;
+  hgroup {
+    h1, h2, h3, h4, h5, h6, p {
+      line-height : 1;
+      margin : .25rem 0 .75rem;
+      padding : 0;
+    }
+  }
+}
+
+// Page Navigation Bar
+//------------------------------------------------------------------------------
+nav {
+  background : $navbar-bg-color;
+  padding : 0;
+  margin : 0;
+  width : 100vw;
+  max-width : 100vw;
+  color: white;
+  ul {
+    @extend %list-reset;
+    width : 100%;
+    background : $navbar-bg-color;
+    text-align : center;
+    li {
+      background : $navbar-bg-color;
+      text-align : center;
+      display : block;
+      width : 100%;
+      a {
+        text-align : center;
+        color: white;
+        text-decoration : none;
+        background : $navbar-bg-color;
+        border: $navbar-bg-color 2px solid;
+        width : 100%;
+        display : block;
+        line-height : 1.5;
+        padding : 1rem 0;
+      }
+    }
+  }
+}
+
+nav ul {
+  @include min-width(560px) {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    align-content : center;
+    justify-content : flex-end;
+    width: 90%;
+    max-width: 768px;
+    margin: 0 auto;
+    li {
+      width : unset;
+      display : inline-block;
+      margin : 0;
+      padding : 0;
+    }
+    a {
+      width : unset;
+      display : inline-block;
+      padding : 1rem !important;
+    }
+  }
+}

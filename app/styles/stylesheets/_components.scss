@@ -1,0 +1,19 @@
+
+
+
+ul.button-list {
+  @include min-width(560px) {
+    li {
+      width : unset;
+      display : inline-block;
+      margin-right : 1rem;
+    }
+  }
+}
+.button, button, [type=button], [type=submit], [type=reset] {
+  @include min-width(560px) {
+    display: inline-block !important;
+    line-height : 1 !important;
+    width : unset !important;
+  }
+}

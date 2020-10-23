@@ -1,0 +1,44 @@
+button, [type="button"], [type="reset"], [type="submit"] {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: var(--border-radius);
+  color: $action-color--contrast;
+  cursor: pointer;
+
+  font-family: var(--font-family-base);
+  font-size: 1.125rem;
+  //-webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  //line-height: 1;
+  padding: var(--spacing--small) var(--spacing);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--duration) var(--timing);
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  width : 100% !important;
+  display : block;
+  line-height : 2;
+
+  -webkit-tap-highlight-color: transparent !important;
+  letter-spacing : .5px;
+  &:hover {
+    background-color: $action-color--alt;
+  }
+
+  &:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+
+
+}

@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>yo webapp deployed to netlify</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -12,18 +13,51 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
+    <!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
+    <!-- NAVIGATION BAR ———————————————————————————————————————————————————— -->
+    <nav role="navigation">
       <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>jQuery</li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
       </ul>
-    </div>
+    </nav>
+
+
+    <!-- PAGE HEADER ————————————————————————————————————————————————————————-->
+    <header role="banner">
+      <hgroup>
+        <h1>Site Title</h1>
+        <h2>Page Title</h2>
+      </hgroup>
+    </header>
+
+
+    <!-- MAIN PAGE CONTENT ————————————————————————————————————————————————— -->
+    <main role="main">
+      <section>
+        <h3>Section Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Ad dolor et exercitationem fugit, in inventore nisi officiis
+           perferendis quas repudiandae saepe temporibus voluptates?
+           Accusantium aspernatur dolorum fugiat nobis officiis porro!</p>
+        <ul class="button-list">
+          <li><button type="button">Default</button></li>
+          <li><button type="button" class="primary">Primary</button></li>
+        </ul>
+      </section>
+    </main>
+
+
+    <!-- PAGE FOOTER ————————————————————————————————————————————————————————-->
+    <footer role="contentinfo">
+      <p>Copyright &copy; 2020. All Rights Reserved</p>
+    </footer>
+
+
+    <!-- ==== JAVASCRIPT =================================================== -->
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
